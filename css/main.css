@@ -1,0 +1,131 @@
+/*Estilos Generales*/
+*,*:after,*:before{
+  box-sizing: border-box;
+}
+html {
+  box-sizing: inherit;
+}
+.container{
+  width: 80%;
+}
+.boxIndex{
+  grid-template-areas: "header"
+                       "hero";
+}
+.button {
+  text-transform: uppercase;
+  font-family: "Oswald";
+  color:white;
+  border-radius: 3px;
+  text-decoration: none;
+  padding: 0.7rem;
+}
+.orange:hover {
+  background-color: rgba(255,128,0,0.8);
+}
+.orange {
+  background-color:#FF8000;
+}
+.transparent{
+  border:1px solid #FF8000;
+  background-color: transparent;
+  color:white;
+  border-radius: 3px;
+}
+.transparent:hover{
+  opacity: 0.8;
+}
+/*Header*/
+header {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top:0;
+  padding: 0.2rem 0;
+  width: 100%;
+  background-color: transparent;
+}
+nav{
+  display: grid;
+  grid-area:"header";
+  grid-template-columns: 1fr 5fr 2fr;
+}
+nav div{
+  display: flex;
+  align-items: center;
+}
+nav div a{
+  color:white;
+  text-decoration: none;
+  font-family: "Roboto",sans-serif;
+}
+nav div.boxLogo p{
+  text-transform: uppercase;
+  font-family: "Oswald",sans-serif;
+  color:white;
+  font-size: 1.2rem;
+  margin: 0;
+
+}
+nav div.boxNav ul{
+  display: flex;
+  width: 100%;
+  flex-flow: row;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+nav div.boxNav ul li{
+  list-style: none;
+  padding: 0 1rem;
+}
+nav div.boxButtons {
+  justify-content: flex-end;
+}
+nav div.boxNav a:hover{
+ opacity: 0.8;
+}
+nav div.boxButtons a:first-child{
+  text-decoration: underline;
+}
+nav div.boxButtons a:first-child:hover{
+  opacity: 0.8;
+}
+/*Hero*/
+div.hero {
+  display: flex;
+  flex-flow: row;
+  height: 80vh;
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.5), 
+      rgba(0, 0, 0, 0.5)
+    ),
+  url("../img/1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  width: 100%;
+  align-items: center;
+  grid-area:"hero";
+  justify-content: center;
+}
+div.hero div.boxInfoPrincipal{
+  color:white;
+}
+div.hero div.boxInfoPrincipal h1{
+  font-family: "Roboto",sans-serif;
+  font-size: 2.8rem;
+  line-height: 3.5rem;
+  margin:0;
+}
+div.hero div.boxInfoPrincipal p,a{
+  font-family: "Roboto",sans-serif;
+}
+div.hero div.boxInfoPrincipal a{
+  margin-right: 1rem;
+}
+div.hero div.boxInfoPrincipal p{
+  font-size: 1rem;
+  margin-bottom: 3rem;
+}
+
