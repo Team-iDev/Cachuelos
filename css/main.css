@@ -135,7 +135,7 @@ section.hero div.boxInfoPrincipal p{
 }
 /*ABOUT*/
 section.about {
-  padding: 4rem 0rem;
+  padding: 6rem 0rem;
 }
 div.boxInfoAbout{
   display: flex;
@@ -174,7 +174,6 @@ div.boxInfoAbout img{
 /*Contact*/
 section.contact{
   padding: 4rem;
-  background-color:#1f618d;
   background-image:linear-gradient(
       rgba(0, 0, 0, 0.7), 
       rgba(0, 0, 0, 0.7)
@@ -194,4 +193,25 @@ div.boxContact p{
 div.boxContact a{
   display: inline-block;
   padding: 1rem 4rem;
+}
+/*Testimonial*/
+section.testimonial{
+  padding: 4rem;
+}
+section.testimonial h2{
+  color:#474747;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Oswald",sans-serif;
+}
+/*Footer*/
+footer{
+  background-color:#1f618d; 
+  padding: 1rem;
+}
+footer p{
+  margin: 0;
+  color:white;
+  text-align: center;
+  font-family: "Roboto",sans-serif;
 }
