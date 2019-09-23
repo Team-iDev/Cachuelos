@@ -15,10 +15,54 @@ body {
 .button {
   text-transform: uppercase;
   font-family: "Oswald";
-  color:white;
   border-radius: 3px;
+  color:white;
   text-decoration: none;
   padding: 0.7rem;
+}
+.icon-facebook2:before {
+  content: "\ea91";
+}
+.icon-google:before {
+  content: "\ea88";
+}
+.gmail{
+  border:1px solid #e4e5e7;
+  color:#7a7d85;
+}
+.gmail:hover{
+  background-color:#fafafa;
+}
+.gmail i{
+  color:red;
+}
+.facebook{
+  background-color:#4267b2;
+  color:white;
+  border: 1px solid #4267b2;
+}
+.facebook:hover{
+  opacity: .9;
+}
+.buttonSocialMedia{
+  display: block;
+  border-radius: .2rem;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: .8rem;
+  text-decoration: none;
+  display: flex;
+  flex-flow: row;
+  justify-content: left;
+  align-items: center;
+}
+.buttonSocialMedia p{
+  margin:0;
+  justify-content: center;
+  width: 90%;
+}
+.buttonSocialMedia i{
+  font-size: 1.4rem;
 }
 .orange:hover {
   background-color: rgba(255,128,0,0.8);
@@ -214,4 +258,62 @@ footer p{
   color:white;
   text-align: center;
   font-family: "Roboto",sans-serif;
+}
+/*Register*/
+section.register{
+  background-color: rgba(0,0,0,0.4);
+  width:100%;
+  height: 100vh;
+  position: fixed;
+  top:0;
+  left:0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section.register div.boxRegister{
+  background-color:white;
+  width: 30%;
+  height: 70%;
+  text-align: center;
+  padding: 1rem 3rem;
+  border-radius:.3rem;
+  box-shadow: 0 0 8px rgba(0,0,0,.8);
+}
+section.register div.boxRegister h3{
+ font-family: "Oswald",sans-serif;
+ color:#555;
+ font-size: 1.4rem;
+ margin-bottom: 2rem;
+}
+.divider{
+  border-bottom: 1px solid #e4e5e7;
+  margin:2rem 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.divider span{
+  color:#404145;
+  background-color: white;
+  position: absolute;
+  display: block;
+  top:-.6rem;
+   padding-left: .5rem;
+  padding-right: .5rem;
+}
+section.register input[type="email"]{
+  width: 100%;
+  padding: .9rem;
+  border: 1px solid #c5c6c9;
+  border-radius: .2rem;
+  margin-bottom: 1rem;
+}
+section.register input[type="email"]::placeholder{
+  color:#7a7d85;
+  font-family: "Roboto",sans-serif;
+}
+section.register a.button{
+  display: block;
+  padding: 1rem 0;
 }
