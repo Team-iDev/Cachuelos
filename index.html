@@ -11,6 +11,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -29,8 +30,8 @@
         </ul>
       </div>
       <div class="boxButtons">
-        <a href="" class="button">Iniciar Sesión</a>
-        <a href="" class="button orange">Registrarse</a>
+        <a href="#bgLogin" id="btnLogin" class="button">Iniciar Sesión</a>
+        <a href="#bgRegister" id="btnRegister" class="button orange">Registrarse</a>
       </div>
     </nav>
   </header>
@@ -43,8 +44,8 @@
         <a href="#" class="button transparent">Quiero Contratar</a>
       </div>
     </section>
-    <section class="register">
-      <div class="boxRegister">
+    <section id="bgRegister" class="register">
+      <div id="infoRegister" class="boxRegister">
         <h3>Únete a Cachuelos</h3>
         <a class="buttonSocialMedia facebook" href="#"><i class="fab fa-facebook-square"></i><p>Continuar con Facebook</p></a>
         <a class="buttonSocialMedia gmail" href="#"><i class="fab fa-google"></i><p>Continuar con Gmail</p></a>
@@ -53,7 +54,28 @@
         </div>
         <input type="email" placeholder="Ingresa tu correo electrónico">
         <a class="button orange" href="#">Continuar</a>
+        <div class="footerRegister">
+        <p>¿Ya eres un miembro? <a href="">Inicia Sesión</a></p>
       </div>
+      </div>
+      
+    </section>
+    <section id="bgLogin" class="login">
+      <div id="infoLogin" class="boxLogin">
+        <h3>Únete a Cachuelos</h3>
+        <a class="buttonSocialMedia facebook" href="#"><i class="fab fa-facebook-square"></i><p>Continuar con Facebook</p></a>
+        <a class="buttonSocialMedia gmail" href="#"><i class="fab fa-google"></i><p>Continuar con Gmail</p></a>
+        <div class="divider">
+        <span>O</span>
+        </div>
+        <input type="email" placeholder="Ingresa tu correo electrónico">
+        <input type="password" placeholder="Ingresa tu contraseña">
+        <a class="button orange" href="#">Continuar</a>
+        <div class="footerRegister">
+        <p>¿Aún no eres un miembro? <a href="">Regístrate</a></p>
+      </div>
+      </div>
+      
     </section>
     <section class="about">
       <div class="boxInfoAbout container">
