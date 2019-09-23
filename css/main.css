@@ -260,7 +260,8 @@ footer p{
   font-family: "Roboto",sans-serif;
 }
 /*Register*/
-section.register{
+section.register,section.login{
+  visibility: hidden;
   background-color: rgba(0,0,0,0.4);
   width:100%;
   height: 100vh;
@@ -271,16 +272,22 @@ section.register{
   justify-content: center;
   align-items: center;
 }
-section.register div.boxRegister{
+section.register:hover , section.login:hover{
+  cursor:pointer;
+}
+section.register div.boxRegister:info,section.login , div.boxLogin{
+  cursor: default;
+}
+section.register div.boxRegister,section.login div.boxLogin{
   background-color:white;
   width: 30%;
-  height: 70%;
+  height: auto;
   text-align: center;
   padding: 1rem 3rem;
   border-radius:.3rem;
   box-shadow: 0 0 8px rgba(0,0,0,.8);
 }
-section.register div.boxRegister h3{
+section.register div.boxRegister h3, div.boxLogin h3{
  font-family: "Oswald",sans-serif;
  color:#555;
  font-size: 1.4rem;
@@ -302,18 +309,25 @@ section.register div.boxRegister h3{
    padding-left: .5rem;
   padding-right: .5rem;
 }
-section.register input[type="email"]{
+section.register input[type="email"],section.login input[type="password"],section.login input[type="email"]{
   width: 100%;
   padding: .9rem;
   border: 1px solid #c5c6c9;
   border-radius: .2rem;
   margin-bottom: 1rem;
 }
-section.register input[type="email"]::placeholder{
+section.register input[type="email"]::placeholder,section.login input[type ="password"]::placeholder,section.login input[type="email"]{
   color:#7a7d85;
   font-family: "Roboto",sans-serif;
 }
-section.register a.button{
+section.register a.button,section.login a.button{
   display: block;
   padding: 1rem 0;
+}
+div.footerRegister{
+  border-top:1px solid #e4e5e7;
+  margin-top:2rem;
+}
+div.footerRegister p{
+  font-family:"Roboto",sans-serif;
 }
