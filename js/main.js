@@ -1,22 +1,34 @@
-var bgRegister = document.getElementById("bgRegister");
+var bgRegister = document.getElementById("infoRegister").parentNode;
+console.log(bgRegister)
 var btnRegister = document.getElementById("btnRegister");
-var bgLogin = document.getElementById("bgLogin");
+var bgLogin = document.getElementById("infoLogin").parentNode;
+console.log(bgLogin)
 var btnLogin = document.getElementById("btnLogin");
-function aReg(){
-	bgRegister.style.visibility = "visible";
+
+function toggleElement(e) {
+
+	if( e.style.visibility != 'visible' ) {
+		showElement(e);
+		return;
+	} else {
+		hideElement(e);
+		return;
+	}
+
 }
-function dReg(){
-	bgRegister.style.visibility = "hidden";
+
+function hideElement(e) {
+	e.style.visibility = 'hidden';
 }
-function aLog(){
-	bgLogin.style.visibility = "visible";
+
+function showElement(e) {
+	e.style.visibility = 'visible'
 }
-function dLog(){
-	bgLogin.style.visibility = "hidden";
-}
-bgRegister.addEventListener("click",dReg);
-btnRegister.addEventListener("click",aReg);
-bgLogin.addEventListener("click",dLog);
-btnLogin.addEventListener("click",aLog);
+
+
+bgRegister.addEventListener("click", () => { toggleElement( bgRegister ) });
+btnRegister.addEventListener("click", () => { toggleElement( bgRegister ) });
+bgLogin.addEventListener("click", () => { toggleElement( bgLogin ) });
+btnLogin.addEventListener("click", () => { toggleElement( bgLogin ) });
 
 
