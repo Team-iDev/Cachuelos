@@ -83,7 +83,10 @@ body {
 .boxIndex{
   grid-template-areas: "header"
                        "hero"
-                       "about";
+                       "about"
+                       "contact"
+                       "testimonial"
+                       "footer";
 }
 /*Header*/
 header {
@@ -94,10 +97,10 @@ header {
   padding: 0.2rem 0;
   width: 100%;
   background-color: transparent;
+  grid-area:header;
 }
 nav{
   display: grid;
-  grid-area:header;
   grid-template-columns: 1fr 5fr 2fr;
 }
 nav div{
@@ -224,6 +227,7 @@ section.contact{
     ), url("../img/3.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  grid-area:contact;
 }
 div.boxContact {
   text-align: center;
@@ -241,6 +245,7 @@ div.boxContact a{
 /*Testimonial*/
 section.testimonial{
   padding: 4rem;
+  grid-area:testimonial;
 }
 section.testimonial h2{
   color:#474747;
@@ -252,6 +257,7 @@ section.testimonial h2{
 footer{
   background-color:#1f618d; 
   padding: 1rem;
+  grid-area:footer;
 }
 footer p{
   margin: 0;
