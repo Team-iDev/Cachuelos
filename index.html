@@ -8,10 +8,11 @@
   <meta name="description" lang="es" content="Tu plataforma para ganar dinero rapido y facil , con trabajos sin experiencia y sin la necesidad de una profesión">
   <meta name="keywords" content="ganar dinero facil , ganar dinero rapido , trabajos sin experiencia , trabajos para estudiantes">
   <meta name="author" content="iDev">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
   <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/ffabdb3b39.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -21,7 +22,7 @@
       <div class="boxLogo">
         <p>Cachuelos</p>
       </div>
-      <div class="boxNav">
+      <div class="boxNav hidden">
         <ul>
           <li><a href="#">¿Cómo funciona?</a></li>
           <li><a href="#">Buscar un Cachuelo</a></li>
@@ -29,9 +30,12 @@
           <li><a href="#">Contacto</a></li>
         </ul>
       </div>
-      <div class="boxButtons">
+      <div class="boxButtons hidden">
         <a href="#bgLogin" id="btnLogin" class="button">Iniciar Sesión</a>
         <a href="#bgRegister" id="btnRegister" class="button orange">Registrarse</a>
+      </div>
+      <div id="menu_bars" class="menu_bars">
+        <span><i class="fas fa-bars"></i></span>
       </div>
     </nav>
   </header>
@@ -109,7 +113,7 @@
     </div>
   </footer>
 </div>
-  <script src="https://kit.fontawesome.com/ffabdb3b39.js" crossorigin="anonymous"></script>
+  
   <script src="js/vendor/modernizr-3.7.1.min.js"></script>
   <script src="js/main.js"></script>
   <script>

@@ -79,6 +79,9 @@ body {
 .transparent:hover{
   opacity: 0.8;
 }
+.hidden{
+  display: none;
+}
 /*BODY*/
 .boxIndex{
   grid-template-areas: "header"
@@ -94,19 +97,28 @@ header {
   justify-content: center;
   position: fixed;
   top:0;
-  padding: 0.2rem 0;
+  padding: 1rem 0;
   width: 100%;
   background-color: transparent;
   grid-area:header;
 }
 nav{
-  display: grid;
-  grid-template-columns: 1fr 5fr 2fr;
+  /*display: grid;
+  grid-template-columns: 1fr 5fr 2fr;*/
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu_bars span i{
+  color:#fff;
+  font-weight: bold;
+  font-size: 1.6rem;
 }
 nav div{
   display: flex;
   align-items: center;
 }
+
 nav div a{
   color:white;
   text-decoration: none;
@@ -116,7 +128,7 @@ nav div.boxLogo p{
   text-transform: uppercase;
   font-family: "Oswald",sans-serif;
   color:white;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   margin: 0;
 
 }
@@ -148,7 +160,7 @@ nav div.boxButtons a:first-child:hover{
 section.hero {
   display: flex;
   flex-flow: row;
-  height: 80vh;
+  height: 100vh;
   background-image: linear-gradient(
       rgba(0, 0, 0, 0.5), 
       rgba(0, 0, 0, 0.5)
@@ -162,19 +174,25 @@ section.hero {
   grid-area:hero;
 }
 section.hero div.boxInfoPrincipal{
+  margin-top: 2rem;
   color:white;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-flow: column;
 }
 section.hero div.boxInfoPrincipal h1{
   font-family: "Roboto",sans-serif;
-  font-size: 2.8rem;
-  line-height: 3.5rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  line-height: 2.8rem;
   margin:0;
 }
 section.hero div.boxInfoPrincipal p,a{
   font-family: "Roboto",sans-serif;
 }
 section.hero div.boxInfoPrincipal a{
-  margin-right: 1rem;
+  margin-top: 1rem;
 }
 section.hero div.boxInfoPrincipal p{
   font-size: 1rem;
@@ -182,26 +200,26 @@ section.hero div.boxInfoPrincipal p{
 }
 /*ABOUT*/
 section.about {
-  padding: 6rem 0rem;
+  padding: 2rem 0rem;
 }
 div.boxInfoAbout{
   display: flex;
-  flex-flow: row;
+  flex-flow: column;
 }
 div.boxAboutText {
-  padding-right: 5rem;
   font-family: "Roboto", sans-serif;
   line-height: 2rem;
 }
 div.boxAboutText h2{
   margin-bottom: 1rem;
   margin-top:0;
-  line-height: 3rem;
+  line-height: 2.5rem;
   color:#474747;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 div.boxAboutText p{
   color:#6f6f6f;
+  font-size: 1rem;
   margin-bottom: 2rem;
 }
 div.boxAboutText a{
@@ -220,7 +238,7 @@ div.boxInfoAbout img{
 }
 /*Contact*/
 section.contact{
-  padding: 4rem;
+  padding: 4rem 0rem;
   background-image:linear-gradient(
       rgba(0, 0, 0, 0.7), 
       rgba(0, 0, 0, 0.7)
