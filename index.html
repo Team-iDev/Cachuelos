@@ -13,19 +13,22 @@
 
 <div class="boxIndex">
   <header id="nav">
-    <nav class="container">
-      <div class="boxLogo">
+    <nav id="navbar" class="container">
+      <div id="boxLogo" class="boxLogo">
         <p>Cachuelos</p>
       </div>
-      <div class="boxNav hidden">
-        <ul>
+      <div id="mobilemenu" class="boxNav hidden">
+        <span id="closeMobileMenu" class="hidden closeMobileMenu">X</span>
+        <ul id="ulMobileMenu">
           <li><a href="#">¿Cómo funciona?</a></li>
           <li><a href="#">Buscar un Cachuelo</a></li>
           <li><a href="#">Contratar</a></li>
           <li><a href="#">Contacto</a></li>
+          <li class="hidden" id="liIniciarSesion"><a href="#">Iniciar Sesión</a></li>
+          <li class="hidden" id="liRegistrarse"><a href="#">Registrarse</a></li>
         </ul>
       </div>
-      <div class="boxButtons hidden">
+      <div id="boxButtons" class="boxButtons hidden">
         <a href="#bgLogin" id="btnLogin" class="button">Iniciar Sesión</a>
         <a href="#bgRegister" id="btnRegister" class="button orange">Registrarse</a>
       </div>
