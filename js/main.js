@@ -1,34 +1,47 @@
-var bgRegister = document.getElementById("infoRegister").parentNode;
-console.log(bgRegister)
 var btnRegister = document.getElementById("btnRegister");
-var bgLogin = document.getElementById("infoLogin").parentNode;
-console.log(bgLogin)
 var btnLogin = document.getElementById("btnLogin");
 
 function toggleElement(e) {
+	e.style.display = e.style.display !=='flex'?'flex':'none';
+}
 
-	if( e.style.visibility != 'visible' ) {
-		showElement(e);
-		return;
+// * Scroll
+
+// ! INFO: El herade no tiene un id, sin embargo es unico. 
+// ! Por eso uso la eqtiqueta como identificador. 
+// ! P.D. No tenia tildes en el momento que escribi este codigo
+
+// TODO: ver si se puede mejorar esto
+if(window.scrollY !== 0) {
+	document.getElementsByTagName('header')[0].style.background = 'rgba(31,92,141,50)'
+
+}
+
+// * INFO: segun yo si accedemos al target del evento no usamos el DOM 
+window.addEventListener('scroll', e => {
+	if(window.scrollY > 0) {
+		e.target.getElementsByTagName('header')[0].style.background = 'rgba(31,92,141,50)'
 	} else {
-		hideElement(e);
-		return;
+		e.target.getElementsByTagName('header')[0].style.background = ''
 	}
-
-}
-
-function hideElement(e) {
-	e.style.visibility = 'hidden';
-}
-
-function showElement(e) {
-	e.style.visibility = 'visible'
-}
+});
 
 
-bgRegister.addEventListener("click", () => { toggleElement( bgRegister ) });
-btnRegister.addEventListener("click", () => { toggleElement( bgRegister ) });
-bgLogin.addEventListener("click", () => { toggleElement( bgLogin ) });
-btnLogin.addEventListener("click", () => { toggleElement( bgLogin ) });
+// * Modals
+window.addEventListener('click', e => {
+    if(e.target.id === 'bgLogin' || e.target.id == 'bgRegister') {
+        e.target.style.display = 'none';
+    } 
+});
+
+
+
+btnRegister.addEventListener("click", () => { 
+	toggleElement( bgRegister ) 
+});
+
+btnLogin.addEventListener("click", () => { 
+	toggleElement( bgLogin ) 
+});
 
 
