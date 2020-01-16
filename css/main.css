@@ -144,6 +144,9 @@ nav{
   margin-top:1rem;
   font-size: 2rem;
 }
+.closeMobileMenu:hover{
+  cursor: pointer;
+}
 .menu_mobile ul li{
   margin-bottom: 2rem;
 }

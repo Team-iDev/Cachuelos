@@ -4,12 +4,13 @@ var btnRegister = document.getElementById("btnRegister");
 var bgLogin = document.getElementById("infoLogin").parentNode;
 var btnLogin = document.getElementById("btnLogin");
 	function hideElement(e) {
-		e.style.visibility = 'hidden';
+		e.classList.add("hidden");
 	}
 	function showElement(e) {
-		e.style.visibility = 'visible';
+		e.classList.remove("hidden");
 	}
 	function toggleElement(e) {
+		console.log("click");
 		if( e.style.visibility != 'visible' ) {
 			showElement(e);
 			return;
@@ -50,6 +51,11 @@ menu_bars.addEventListener("click",function(){
 	liRegistrarse.classList.remove("hidden");
 	closeMobileMenu.classList.remove("hidden");
 });
-closeMobileMenu.addEventListener("click",toggleElement(mobilemenu));
+closeMobileMenu.addEventListener("click", function(){
+	mobilemenu.classList.add("hidden");
+	navbar.classList.remove("menu_mobile");
+	toggleElement(boxLogo);
+	toggleElement(menu_bars);
+});
 
 
